@@ -6,6 +6,9 @@ Markdown + CSS = PDF
 First install [wkhtmltopdf](http://wkhtmltopdf.org/downloads.html). Then
 
 ```
+git clone https://github.com/nasser/malaf.git
+cd malaf
+npm install
 node malaf.js foo.md
 ```
 
