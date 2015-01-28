@@ -1,5 +1,5 @@
 # Malaf
-Markdown + CSS -> PDFs
+Markdown + CSS = PDF
 
 ## Usage
 
