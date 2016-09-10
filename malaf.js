@@ -15,6 +15,7 @@ function compileFile(markdownFile) {
   htmlSource += "</body>" ;
 
   fs.writeFileSync(htmlFile, htmlSource);
+  console.log("generated " + htmlFile);
   exec('wkhtmltopdf ' + htmlFile + " " + pdfFile, function (error, stdout, stderr) {
     console.log("generated " + pdfFile);
   });
