@@ -2,6 +2,8 @@ var marked = require("marked")
 var fs = require("fs")
 var exec = require('child_process').exec;
 
+var styleFile = process.argv[3] || "style.css";
+
 function compileFile(markdownFile) {
   var htmlFile = markdownFile + ".html";
   var pdfFile = markdownFile + ".pdf";
@@ -9,7 +11,8 @@ function compileFile(markdownFile) {
   var markdownSource = fs.readFileSync(markdownFile, "utf8");
   var htmlSource = "<html><head>";
   htmlSource += "<meta charset=\"utf8\">";
-  htmlSource += "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">" ;
+  htmlSource += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + styleFile + "\">" ;
+  htmlSource += "<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>" ;
   htmlSource += "</head><body>" ;
   htmlSource += marked(markdownSource);
   htmlSource += "</body>" ;
