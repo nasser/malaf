@@ -12,8 +12,8 @@ npm install
 node malaf.js README.md
 ```
 
-Will generate `README.md.pdf`. If a `style.css` is in the same directory it, will be used to style the page. It will also watch the file and update the PDF when it changes.
+Will generate `README.md.pdf`. You can pass the path to a CSS file following the markdown file and it will be used to style the page, otherwise  It will also watch the file and update the PDF when it changes.
 
 ## License
 
-Copyright © Ramsey Nasser 2015. Provided under the [MIT License](http://opensource.org/licenses/MIT)
+Copyright © Ramsey Nasser 2015-2016. Provided under the [MIT License](http://opensource.org/licenses/MIT)
